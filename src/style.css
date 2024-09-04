@@ -194,6 +194,7 @@
 .choose > select{
     width: 5rem;
     height: 2rem;
+    padding: 0.2rem;
 }
 
 
@@ -207,5 +208,8 @@
     outline: 1px solid black;
     position: relative;
     left: 14rem;
-    
+}
+
+.splitBtn:hover{
+    background-color: rgb(255, 202, 68);
 }
