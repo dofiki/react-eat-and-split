@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const friendData = [
-  {id:1, name:"Ram", image:"./user.png", balance: 0},
-  {id:2, name:"Shyam", image:"./user.png", balance: 5},
-  {id:3, name:"Rita", image:"./user.png", balance: -7}
+  // {id:1, name:"Ram", image:"./user.png", balance: 0},
+  // {id:2, name:"Shyam", image:"./user.png", balance: 5},
+  // {id:3, name:"Rita", image:"./user.png", balance: -7}
 ]
 
 export default function App(){
