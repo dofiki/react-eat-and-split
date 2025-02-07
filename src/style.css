@@ -1,23 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+
+:root {
+    --color-primary: #2D336B;
+    --color-secondary: #A9B5DF;
+    --color-accent: #2D336B;
+    --color-danger: rgb(174, 0, 0);
+    --color-danger-hover: rgb(109, 1, 1);
+    --color-text: white;
+    --color-hover: #161934;
+    --color-navbar: black;
+}
+
+.logoimg{
+    width: 38px;
+    height: 38px;
+}
+
 
 *{
     margin: 0;
     padding: 0;
-    font-family: "Archivo", sans-serif;
+    font-family: "Martian Mono", serif;
+    
+}
+
+body{
+
+    background-color: var(--color-primary);
 }
 
 .userImage{
     width: 50px;
     border-radius: 50%;
-    border: 2px solid black;
+    
+}
+
+.userName{
+    font-size: 1rem;
 }
 
 .all{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 1rem;
     height: 80vh;
     align-items: center;
+}
+
+@media (max-width:700px){
+    .all{
+        display: grid;
+        height: 100vh;
+        padding: 2rem;
+        
+    }
+
+    .right{
+
+        border-radius: 1rem;
+        width: 5rem;
+        height: 16.3rem;
+        padding: 0.2rem;
+        margin-top: 0rem;
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        text-align: center;
+    
+        font-size: 0.8rem;
+    }
+    
+    .billInp{
+        height: 0.8rem;
+        padding: 15px;
+        width: 4rem;
+    }
+    
+    .left{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .splitForm{
+        display: flex;
+        flex-direction: column;
+        width: 15rem;
+    }
 }
 
 .left{
@@ -34,14 +104,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: rem;
     padding: 0.5rem;
     border-radius: 1rem;
+    color: var(--color-text);
+    margin-top: 0.5rem;
 }
 
 .eachFriend:hover{
-    background-color: bisque;
+    background-color: var(--color-secondary);
     transition: 0.2s ease-in;
+    color: black;
 
 }
 
@@ -57,28 +130,34 @@
     width: 5rem;
     height: 2rem;
     border-radius: 0.5rem;
-    outline: 1px solid black;
+    outline: 1px solid var(--color-secondary);
     border: none;
-    background-color: rgb(255, 223, 158);
+    background-color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .closeBtn{
     width: 5rem;
     height: 2rem;
     border-radius: 0.5rem;
-    outline: 1px solid black;
+    outline: 1px solid rgb(255, 255, 255);
     border: none;
-    background-color: rgb(239, 157, 157);
+    background-color: rgb(174, 0, 0);
+    color: var(--color-text);
+}
+
+.closeBtn:hover{
+    background-color: rgb(109, 1, 1);
 }
 
 .selectBtn:hover{
-    background-color: rgb(255, 202, 97) ;
+    background-color: #161934 ;
     transition: 0.1s ease-in;
 }
 
 .addBtnContainer{
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .addBtn{
@@ -87,28 +166,32 @@
     border-radius: 0.5rem;
     outline: none;
     border: none;
-    background-color: rgb(255, 218, 126);
+    background-color: var(--color-primary);
     left: 50rem;
-    outline: 1px solid black;
+    color: var(--color-text);;
+    outline: 1px solid rgb(255, 255, 255);
 }
 
 .addBtn:hover{
-    background-color:rgb(255, 182, 109);
+    background-color:#161934;
     transition: 0.1s ease-in;
 }
 .userDescription{
     font-size: 0.8rem;
+    letter-spacing: -1px;
 }
 
 .userInfoText{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    
 }
 
 .friendForm{
     display: none;
     justify-content: center;
+    font-size: 0.8rem;
 }
 
 .friendFormActive{
@@ -125,8 +208,9 @@
     gap: 0.5rem;
     width: 20rem;
     padding: 1rem;
-    background-color: bisque;
     border-radius: 1rem;
+    background-color: var(--color-secondary);
+    color: black;
 }
 
 
@@ -150,19 +234,24 @@
 
 .inpURL{
     height: 1rem;
+
 }
 
 .top input{
     padding: 10px;
+    
 }
 
 .bottom input{
     padding: 10px;
+    font-size: 0.8rem;
+    letter-spacing: -0.5px;
+
 
 }
 
 .right{
-    background-color: bisque;
+    background-color: #7886C7;
     border-radius: 1rem;
     width: 25rem;
     height: 26.3rem;
@@ -171,6 +260,7 @@
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+
 }
 
 .splitForm {
@@ -204,12 +294,49 @@
     border-radius: 0.5rem;
     outline: none;
     border: none;
-    background-color: rgb(255, 218, 126);
-    outline: 1px solid black;
+    background-color: var(--color-primary);;
+    color:white;
+    outline: 1px solid white;
     position: relative;
     left: 14rem;
 }
 
 .splitBtn:hover{
-    background-color: rgb(255, 202, 68);
+    background-color: var(--color-hover);;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: #FFF2F2;
+    width: 100vw;
+    height: 4rem;
+
+  
+}
+
+.menuMain{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo:hover{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e1e8ff;;
 }
